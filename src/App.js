@@ -1,15 +1,17 @@
-import './App.css';
+
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Login from "./ui/login";
+import Main from "./ui/main";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-            <h1>Assignment Support</h1>
-          <div className="lds-ripple">
-              <div></div>
-              <div></div>
-          </div>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main/>}/>
+            <Route path="/login" element={<Login/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
